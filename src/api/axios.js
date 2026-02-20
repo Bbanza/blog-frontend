@@ -1,8 +1,11 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+const API = axios.create({
+  baseURL: process.env.REACT_APP_API_URL,
 });
+
+export const fetchPosts = () => API.get('/api/posts');
+export const createPost = (data) => API.post('/api/posts', data);
 
 // Add token automatically to every request
 api.interceptors.request.use((config) => {
@@ -15,4 +18,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export default api;
+export default API;
