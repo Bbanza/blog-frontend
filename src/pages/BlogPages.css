@@ -1,0 +1,93 @@
+/* BlogPages.css */
+
+/* Container for all pages */
+.page-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page headings */
+.page-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+}
+
+/* Forms */
+.page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs and textarea */
+.page-form input[type="text"],
+.page-form input[type="file"],
+.page-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.page-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Buttons */
+.page-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.page-form button:hover {
+  background-color: #019875;
+}
+
+/* Error messages */
+.error-msg {
+  color: #d63031;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+/* Post card for MyPosts and Home */
+.post-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.post-card img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* Post card buttons */
+.post-card button {
+  margin-right: 10px;
+  background-color: #ff7675;
+  font-weight: 500;
+}
+
+.post-card button:hover {
+  background-color: #d63031;
+}
