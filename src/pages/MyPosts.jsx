@@ -11,7 +11,7 @@ const MyPosts = () => {
 
   const fetchMyPosts = async () => {
     try {
-      const { data } = await api.get("/posts"); // fetch all posts
+      const { data } = await api.get("/api/posts/my"); // fetch all posts
       const token = localStorage.getItem("token");
 
       // Filter posts by the logged-in user

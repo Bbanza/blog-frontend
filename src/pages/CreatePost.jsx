@@ -27,7 +27,7 @@ const CreatePost = () => {
       if (imageFile) formData.append("image", imageFile);
 
     //const response = await api.post("/posts", formData);
-    const response = await api.post("/posts", formData, {
+    const response = await api.post("/api/posts", formData, {
         headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
