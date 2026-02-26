@@ -11,7 +11,7 @@ const MyPosts = () => {
   const fetchMyPosts = async () => {
     try {
       // ✅ Fetch ALL posts (correct endpoint)
-      const { data } = await api.get("/posts");
+      const { data } = await api.get("/api/posts");
 
       const token = localStorage.getItem("token");
       if (!token) {

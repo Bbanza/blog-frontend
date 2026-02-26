@@ -16,20 +16,20 @@ API.interceptors.request.use((config) => {
 
 // ================= Blog Endpoints =================
 
-export const fetchPosts = () => API.get("/posts");
+export const fetchPosts = () => API.get("/api/posts");
 
-export const fetchPostById = (id) => API.get(`/posts/${id}`);
+export const fetchPostById = (id) => API.get(`/api/posts/${id}`);
 
-export const createPost = (data) => API.post("/posts", data);
+export const createPost = (data) => API.post("/api/posts", data);
 
-export const updatePost = (id, data) => API.put(`/posts/${id}`, data);
+export const updatePost = (id, data) => API.put(`/api/posts/${id}`, data);
 
-export const deletePost = (id) => API.delete(`/posts/${id}`);
+export const deletePost = (id) => API.delete(`/api/posts/${id}`);
 
 
 // ================= Auth Endpoints =================
 
-export const signup = (userData) => API.post("/auth/signup", userData);
+export const signup = (userData) => API.post("/api/auth/signup", userData);
 
 export const login = (credentials) => API.post("/auth/login", credentials);
 
