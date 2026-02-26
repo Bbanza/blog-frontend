@@ -7,27 +7,67 @@ const API = axios.create({
 
 // Token interceptor
 API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token"); 
+  const token = localStorage.getItem("token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
 });
 
-// Blog Endpoints
+// ================= Blog Endpoints =================
+
 export const fetchPosts = () => API.get("/posts");
+
 export const fetchPostById = (id) => API.get(`/posts/${id}`);
-export const fetchMyPosts = () => API.get("/posts/my");
+
 export const createPost = (data) => API.post("/posts", data);
+
 export const updatePost = (id, data) => API.put(`/posts/${id}`, data);
+
 export const deletePost = (id) => API.delete(`/posts/${id}`);
 
-// Auth Endpoints
+
+// ================= Auth Endpoints =================
+
 export const signup = (userData) => API.post("/auth/signup", userData);
+
 export const login = (credentials) => API.post("/auth/login", credentials);
+
 export const getCurrentUser = () => API.get("/auth/me");
 
 export default API;
+
+
+// // src/api/axios.js
+// import axios from "axios";
+
+// const API = axios.create({
+//   baseURL: import.meta.env.VITE_API_URL,
+// });
+
+// // Token interceptor
+// API.interceptors.request.use((config) => {
+//   const token = localStorage.getItem("token"); 
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
+
+// // Blog Endpoints
+// export const fetchPosts = () => API.get("/posts");
+// export const fetchPostById = (id) => API.get(`/posts/${id}`);
+// export const fetchMyPosts = () => API.get("/posts/my");
+// export const createPost = (data) => API.post("/posts", data);
+// export const updatePost = (id, data) => API.put(`/posts/${id}`, data);
+// export const deletePost = (id) => API.delete(`/posts/${id}`);
+
+// // Auth Endpoints
+// export const signup = (userData) => API.post("/auth/signup", userData);
+// export const login = (credentials) => API.post("/auth/login", credentials);
+// export const getCurrentUser = () => API.get("/auth/me");
+
+// export default API;
 
 // // src/api/axios.js
 // import axios from "axios";
