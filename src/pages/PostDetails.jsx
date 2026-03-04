@@ -23,7 +23,7 @@ const PostDetails = () => {
 
     const fetchCurrentUser = async () => {
       try {
-        const { data } = await api.get("/auth/me");
+        const { data } = await api.get("/api/auth/me"); //fixed here to match backend endpoint
         setCurrentUser(data);
       } catch (error) {
         console.log("User not logged in");
