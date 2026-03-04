@@ -12,7 +12,8 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await api.get(`/posts/${id}`);
+        // const response = await api.get(`/posts/${id}`);
+        const response = await api.get(`/api/posts/${id}`);
         setPost(response.data);
       } catch (err) {
         setError('Failed to fetch post');

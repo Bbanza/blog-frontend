@@ -14,7 +14,7 @@ const PostDetails = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const { data } = await api.get(`/posts/${id}`);
+        const { data } = await api.get(`/api/posts/${id}`);
         setPost(data);
       } catch (err) {
         setError("Failed to load post");
