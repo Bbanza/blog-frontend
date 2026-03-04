@@ -40,7 +40,7 @@ const PostDetails = () => {
     if (!confirmDelete) return;
 
     try {
-      await api.delete(`/posts/${id}`);
+      await api.delete(`/api/posts/${id}`); //fixed here to match backend endpoint
       navigate("/"); // Redirect to home after deletion
     } catch (error) {
       console.error("Delete failed:", error);
