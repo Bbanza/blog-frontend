@@ -27,7 +27,7 @@ export const deletePost = (id) => API.delete(`/api/posts/${id}`);
 
 export const signup = (userData) => API.post("/api/auth/signup", userData);
 export const login = (credentials) => API.post("/api/auth/login", credentials);
-export const getCurrentUser = () => API.get("/auth/me");
+export const getCurrentUser = () => API.get("/api/auth/me");
 
 export default API;
 
