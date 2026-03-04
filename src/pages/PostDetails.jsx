@@ -58,7 +58,7 @@ const PostDetails = () => {
 
       {post.imageUrl && (
         <img
-          src={`http://localhost:5000/${post.imageUrl}`}
+          src={post.imageUrl}//{`http://localhost:5000/$//{post.imageUrl}`}
           alt={post.title}
           width="300"
         />

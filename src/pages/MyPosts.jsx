@@ -43,7 +43,7 @@ const MyPosts = () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
 
     try {
-      await api.delete(`/posts/${id}`);
+      await api.delete(`/api/posts/${id}`);
       setPosts(posts.filter((post) => post._id !== id));
     } catch (err) {
       console.error("Failed to delete post:", err);
