@@ -11,7 +11,7 @@ const Signup = () => {
     e.preventDefault(); // stop page reload
 
     try {
-      const response = await api.post('/auth/signup', {
+      const response = await api.post('/api/auth/signup', {
         username,
         email,
         password,
